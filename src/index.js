@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import { Authprovider } from "./ontext/Authcontext";
 import reportWebVitals from './reportWebVitals';
+import { Themeprovider } from './ontext/Themcontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Themeprovider>
     <Authprovider>
     <App />
     </Authprovider>
+    </Themeprovider>
   </React.StrictMode>
 );
 

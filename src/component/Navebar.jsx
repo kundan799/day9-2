@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../ontext/Authcontext";
+import { Themcontext } from "../ontext/Themcontext";
 
 const Navebar = () => {
     const {isAuthorized,Login,Logout}=useContext(AuthContext);
+    const {islight,toggleTheme}=useContext(Themcontext)
   return (
     <div>
       <nav className="nav">
@@ -17,6 +19,8 @@ const Navebar = () => {
       }}>
         {isAuthorized ? "Logout" :"Login"}</button>
               <button>Signup</button>
+              <button onClick={toggleTheme}>{`make ${islight ? "dark" :"Light"}`}</button>
+              
 
           </div>
 
